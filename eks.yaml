@@ -3,10 +3,30 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: expense-1
+  name: expense
   region: us-east-1
 managedNodeGroups:
   - name: expense
-    instanceType: t3.micro
+    instanceType: m5.large
     desiredCapacity: 3
     spot: true 
+    availabilityZones:
+    - us-east-1f
+
+
+
+#Siva EKS cluster creation yaml file
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: expense
+#   region: us-east-1
+
+# managedNodeGroups:
+#   - name: expense
+#     instanceType: m5.large
+#     desiredCapacity: 3
+#     spot: true
+#     availabilityZones:
+#     - us-east-1f
